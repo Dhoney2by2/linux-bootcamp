@@ -16,4 +16,13 @@ Quickstart: Create a Linux VM
 Quickstart for Bash in Azure Cloud Shell
 * https://docs.microsoft.com/en-us/azure/cloud-shell/quickstart
 
-Finished the assignment with no stress
+Finished the assignment with no stress with the following steps
+Cloud shell was lunched using Chrome Browser and Git bash
+But the terminal was lunched on power shell
+My Virtual machine name is : WEBDEVDHONEY
+Resource group created successfuly with no stress
+Virtual network/subnet
+DayofirstAssignment-vnet/default
+Public IP : 20.120.30.10
+Web server was created successfully and working in action
+But I put my Azure account off so it does not run out of credit
