@@ -15,3 +15,5 @@ Quickstart: Manage Azure disks
 
 Quickstart for Bash in Azure Cloud Shell
 * https://docs.microsoft.com/en-us/azure/cloud-shell/quickstart
+
+Default Azure Disk of 1TB
