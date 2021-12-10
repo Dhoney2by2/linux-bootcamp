@@ -15,3 +15,17 @@ Quickstart: Create a Linux VM
 
 Quickstart for Bash in Azure Cloud Shell
 * https://docs.microsoft.com/en-us/azure/cloud-shell/quickstart
+
+Resurce group was created (Dayofirstassignmet)
+connected to my VM 
+az vm create \
+    --resource-group DayofirstAssignment \
+    --name DHoney \
+    --image UbuntuLTS \
+    --size Standard_F4s \
+    --generate-ssh-keys
+After connecting to VM
+ssh -i .\Downloads\modeez.pem Dhoney@20.120.30.10
+
+Tried to run it and got an Error message but was tried again and it when through
+Starting and stopping my VM working using the command 
