@@ -230,3 +230,65 @@ gcloud compute instances stop web-instance-01
 [The gcloud cheat sheet](https://cloud.google.com/sdk/docs/cheatsheet "The gcloud cheat sheet")
 
 [The gcloud cheat sheet: Understanding commands](https://cloud.google.com/sdk/docs/cheatsheet#understanding_commands "The gcloud cheat sheet: Understanding commands")
+
+Working with GCP was fun and enlightening
+I was able to create my google accout, Open my terminal and editors to work on
+Using us-west4-b as my region and zone
+but was unable to change my default name 
+i used the created id and it worked fine
+miel5088@cloudshell:~ (clear-incentive-332618)$ gcloud beta billing projects link <clear-incentive-332618> --billing-account=<account_id>
+-bash: syntax error near unexpected token `newline'
+miel5088@cloudshell:~ (clear-incentive-332618)$ gcloud beta billing accounts list
+ACCOUNT_ID: 01ED87-B8B872-987DA9NAME: My Billing Account
+OPEN: True
+MASTER_ACCOUNT_ID:
+miel5088@cloudshell:~ (clear-incentive-332618)$ gcloud billing projects link <clear-incentive-332618> --billing-account=<01ED87-B8B872-987DA9>
+-bash: syntax error near unexpected token `newline'
+miel5088@cloudshell:~ (clear-incentive-332618)$ gcloud beta billing projects link <clear-incentive-332618> --billing-account=<01ED87-B8B872-987DA9>
+-bash: syntax error near unexpected token `newline'
+miel5088@cloudshell:~ (clear-incentive-332618)$ gcloud beta billing projects link clear-incentive-332618 --billing-account=01ED87-B8B872-987DA9
+billingAccountName: billingAccounts/01ED87-B8B872-987DA9
+billingEnabled: true
+name: projects/clear-incentive-332618/billingInfo
+projectId: clear-incentive-332618
+miel5088@cloudshell:~ (clear-incentive-332618)$ SERVICE=$(gcloud services list --available --filter="NAME ~ ^compute" --format="value(NAME)")
+miel5088@cloudshell:~ (clear-incentive-332618)$ echo $SERVICE
+compute.googleapis.com
+miel5088@cloudshell:~ (clear-incentive-332618)$ gcloud services enable $SERVICE
+miel5088@cloudshell:~ (clear-incentive-332618)$ gcloud config set compute/region us-west4
+Updated property [compute/region].
+miel5088@cloudshell:~ (clear-incentive-332618)$ gcloud config set compute/zone us-west4-b
+Updated property [compute/zone].
+miel5088@cloudshell:~ (clear-incentive-332618)$ gcloud config list
+[accessibility]
+screen_reader = True
+[component_manager]
+disable_update_check = True
+[compute]
+gce_metadata_read_timeout_sec = 30
+region = us-west4
+zone = us-west4-b
+[core]
+account = miel5088@gmail.com
+disable_usage_reporting = True
+project = clear-incentive-332618
+[metrics]
+environment = devshell
+
+Your active configuration is: [cloudshell-28031]
+miel5088@cloudshell:~ (clear-incentive-332618)$ gcloud compute networks list
+NAME: default
+SUBNET_MODE: AUTO
+BGP_ROUTING_MODE: REGIONAL
+IPV4_RANGE:
+GATEWAY_IPV4:
+
+NAME: vpc-network
+SUBNET_MODE: CUSTOM
+BGP_ROUTING_MODE: REGIONAL
+IPV4_RANGE:
+GATEWAY_IPV4:
+At the firewall rule i got an error that i was unable to fetch resource 
+gcloud compute networks delete default
+I had to delete instance and started allover again bitt hen i deleted the port 22
+re installeded annd finshed successfully
