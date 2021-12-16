@@ -26,3 +26,6 @@ DayofirstAssignment-vnet/default
 Public IP : 20.120.30.10
 Web server was created successfully and working in action
 But I put my Azure account off so it does not run out of credit
+Had issues commiting using git commit
+Error message shows says "please tell me who you are"
+After several attemps i started all over cloning another github on my desktop 
